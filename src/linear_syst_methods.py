@@ -25,7 +25,7 @@ import numpy as np
 
 
 # ####################################################################
-def     eliminacion_gaussiana(A: np.ndarray) -> np.ndarray:
+def eliminacion_gaussiana(A: np.ndarray) -> np.ndarray:
     """Resuelve un sistema de ecuaciones lineales mediante el método de eliminación gaussiana.
 
     ## Parameters
@@ -92,7 +92,7 @@ def     eliminacion_gaussiana(A: np.ndarray) -> np.ndarray:
             suma += A[i, j] * solucion[j]
         solucion[i] = (A[i, n] - suma) / A[i, i]
 
-    return solucion, A
+    return solucion
 
 
 # ####################################################################
@@ -140,6 +140,8 @@ def descomposicion_LU(A: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
         raise ValueError("No existe solución única.")
 
     return L, A
+
+
 
 
 # ####################################################################
